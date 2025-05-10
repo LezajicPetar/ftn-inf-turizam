@@ -74,6 +74,7 @@ hr {
   gap: 10px;
   align-content: end;
   height: fit-content;
+  max-width: 300px;
 }
 #container #form input {
   border: none;
@@ -83,9 +84,23 @@ hr {
 #container #form #tagovi-container {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
-#container #form #tagovi-container input {
-  width: 25%;
+#container #form #tagovi-container .tag-input {
+  width: 50px;
+}
+#container #form #tagovi-container #tagovi {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#container #form #tagovi-container #tagovi .tag-parovi {
+  gap: 5px;
+}
+#container #form #tagovi-container #tagovi .tag-parovi button {
+  border: 1px solid black;
+  padding: 3px 5px;
+  border-radius: 5px;
 }
 #container #form div {
   display: flex;

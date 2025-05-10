@@ -1,5 +1,6 @@
 'use strict'
 
+let tagovi = []
 
 class Tura {
     constructor(naziv, duzina, opis, tagovi) {
@@ -31,7 +32,7 @@ function displayTuraDetails(tura) {
     }
 
     let div = document.querySelector('#tura-details')
-    div.innerHTML = '' 
+    div.innerHTML = ''
 
     p1.style.fontWeight = 'bold'
     div.style.display = 'block'
@@ -69,8 +70,66 @@ function createTableRows() {
     }
 }
 
+function handleFormSubmission() {
+    let submitButton = document.querySelector('#dodaj-turu')
+
+    submitButton.addEventListener('click', () => {
+        let form = document.querySelector('#form')
+        let formData = new FormData(form)
+
+        let naziv = formData.get('naziv')
+        let duzina = formData.get('duzina')
+        let opis = formData.get('opis')
+
+        let tura = new Tura(naziv, duzina, opis, tagovi)
+        let localStorageData = JSON.parse(localStorage.getItem('ture')) || []
+        localStorageData.push(tura)
+        localStorage.setItem('ture', JSON.stringify(localStorageData))
+        tagovi = []
+        createTableRows()
+    })
+}
+
+function dodajTag() {
+    let input = document.getElementById('tag-input')
+    let vrednost = input.value
+
+    tagovi.push(vrednost)
+    prikaziTagove()
+    input.value = ''
+}
+
+function obrisiTag(index) {
+    tagovi.splice(index, 1)
+    prikaziTagove()
+}
+
+function prikaziTagove() {
+    let tagDiv = document.getElementById('tagovi')
+    tagDiv.innerHTML = ''
+
+    for (let i = 0; i < tagovi.length; i++) {
+        let divContainer = document.createElement('div')
+        divContainer.className = 'tag-parovi'
+
+        let div = document.createElement('div')
+        div.className = 'tag'
+        div.textContent = tagovi[i]
+
+        let removeButton = document.createElement('button')
+        removeButton.textContent = 'X'
+        removeButton.onclick = () => obrisiTag(i)
+
+        divContainer.appendChild(div)
+        divContainer.appendChild(removeButton)
+
+        tagDiv.appendChild(divContainer)
+    }
+}
+
 function initializeTure() {
     createTableRows()
+    handleFormSubmission()
 }
 
 document.addEventListener("DOMContentLoaded", initializeTure) 

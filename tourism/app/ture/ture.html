@@ -10,8 +10,8 @@
     <nav class="navbar">
         <h1 class="title">TourApp</h1>
         <ul class="nav-links">
-            <li><a href="contact/contact.html">Kontakt</a></li>
-            <li><a href="ture/ture.html">Ture</a></li>
+            <li><a href="../contact/contact.html">Kontakt</a></li>
+            <li><a href="ture.html">Ture</a></li>
             <li><a href="#">Restorani</a></li>
         </ul>
     </nav>
@@ -23,7 +23,7 @@
                     <tr>
                         <th>Br</th>
                         <th>Naziv</th>
-                        <th>Duzina</th>
+                        <th>Duzina (km)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,11 +52,11 @@
             <div id="tagovi-container">
                 <p>Tagovi:</p>
                 <div id="tagovi"></div>
-                <input type="text" name="tagovi" id="tagovi-input">    
+                <input type="text" name="tagovi" id="tag-input" placeholder="Unesite tag">    
             </div>
             <div id="container-button">
-                <button type="submit" id="dodaj-tag">+</button>
-                <button type="submit" id="dodaj-turu">Dodaj</button>
+                <button type="button" id="dodaj-tag" onclick="dodajTag()">+</button>
+                <button type="button" id="dodaj-turu">Dodaj</button>
             </div>
         </form>
         

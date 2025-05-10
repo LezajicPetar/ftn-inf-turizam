@@ -83,6 +83,7 @@ hr{
         gap: 10px;
         align-content: end;
         height: fit-content;
+        max-width: 300px;
 
         input{
             border: none;
@@ -92,10 +93,29 @@ hr{
         #tagovi-container{
             display: flex;
             flex-direction: column;
+            gap: 10px;
             
-            input{
-                width: 25%;
+            .tag-input{
+                width: 50px;
             }
+
+            #tagovi{
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                
+                .tag-parovi{
+                    
+                    gap: 5px;
+                    
+                    button{
+                        border: $border-value;
+                        padding: 3px 5px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            
         }
 
         div{
