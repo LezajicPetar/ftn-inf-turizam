@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pregled restorana</title>
+    <link rel="stylesheet" href="restorani.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="title">TourApp</h1>
+      <ul class="nav-links">
+        <li><a href="app/contact/contact.html">Kontakt</a></li>
+        <li><a href="app/ture/ture.html">Ture</a></li>
+        <li><a href="app/restorani/restorani.html">Restorani</a></li>
+      </ul>
+    </nav>
+
+    <h2>Restorani</h2>
+    <table id="restorani">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Naziv</th>
+          <th>Kuhinje</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="detalji"></div>
+
+    <h3>Dodaj novi restoran</h3>
+    <form id="forma">
+      <label>Naziv: <input type="text" name="naziv" required /></label
+      ><br /><br />
+      <label>Opis: <input type="text" name="opis" required /> </label
+      ><br /><br />
+      <label
+        >Tipovi kuhinje: <input type="text" name="kuhinje" required /></label
+      ><br /><br />
+      <button type="submit">Dodaj</button>
+    </form>
+    <script src="restorani.js"></script>
+  </body>
+</html>

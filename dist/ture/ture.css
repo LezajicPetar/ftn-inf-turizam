@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  margin: 0px 15px;
+  border: 1px solid black;
+}
+
+.navbar {
+  display: flex;
+  margin: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .title {
+  font-size: 30px;
+  width: fit-content;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+.navbar .nav-links li {
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 10px;
+}
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#container {
+  display: flex;
+  margin: 15px;
+  gap: 20px;
+}
+#container #ture-list {
+  display: flex;
+  flex-direction: column;
+}
+#container #ture-list table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 300px;
+}
+#container #ture-list table th, #container #ture-list table td, #container #ture-list table tr {
+  border: 1px solid black;
+  padding: 10px;
+}
+#container #ture-list #tura-details {
+  margin-top: 20px;
+  border: 1px solid black;
+  display: none;
+  padding: 10px;
+}
+#container #ture-list #tura-details p {
+  margin: 10px;
+}
+#container #form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 10px;
+  gap: 10px;
+  align-content: end;
+  height: fit-content;
+  max-width: 300px;
+}
+#container #form input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+#container #form #tagovi-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#container #form #tagovi-container .tag-input {
+  width: 50px;
+}
+#container #form #tagovi-container #tagovi {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#container #form #tagovi-container #tagovi .tag-parovi {
+  gap: 5px;
+}
+#container #form #tagovi-container #tagovi .tag-parovi button {
+  border: 1px solid black;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+#container #form div {
+  display: flex;
+}
+#container #form #container-button {
+  justify-content: space-between;
+}
+#container #form #container-button button {
+  padding: 5px;
+}
+
+/*# sourceMappingURL=ture.css.map */
